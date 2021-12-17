@@ -22,19 +22,20 @@ cd packages/smfw-cms && yarn start:test
 
 # Example
 ```ts
-import { Engine, templates, themes, slices, createStore, createReducer } from '@smfw/web';
+import { Engine,layouts, templates, themes, slices, createStore, createReducer } from '@smfw/web';
 
 const engine = new Engine();
 const store = createStore(createReducer(slices), []);
 
 engine.addTheme('themes.classic', themes.classic);
-engine.addTemplate('templates.classic.manager', templates.classic.login);
+engine.addLayout('layouts.classic.basic', layouts.classic.basic);
+engine.addTemplate('templates.classic.login', 'layouts.classic.basic', templates.classic.login);
 
 engine.addPage({
     title: 'Login',
     path: '/'
   },
-  'templates.classic.manager',
+  'templates.classic.login',
   'themes.classic'
 );
 
