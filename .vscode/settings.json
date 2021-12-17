@@ -1,0 +1,8 @@
+{
+    "eslint.workingDirectories": ["packages/smfw-web", "packages/smfw-cms"],
+    "eslint.packageManager": "yarn",
+    "editor.tabSize": 4,
+    "editor.detectIndentation": false,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "files.eol": "\n"
+}

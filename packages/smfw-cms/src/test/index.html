@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title><%= htmlWebpackPlugin.options.title %></title>
+        <link
+            rel="stylesheet"
+            href="<%= htmlWebpackPlugin.options.env.VENDOR_URL %>/normalize.css/normalize@8.0.1.min.css"
+        />
+        <link
+            rel="stylesheet"
+            href="<%= htmlWebpackPlugin.options.env.VENDOR_URL %>/material-design-icons-3.0.2/iconfont/material-icons.css"
+        />
+
+        <script src="<%= htmlWebpackPlugin.options.env.VENDOR_URL %>/jquery/jquery@3.3.1.min.js"></script>
+        <script src="<%= htmlWebpackPlugin.options.env.VENDOR_URL %>/lodash/lodash@4.17.21.min.js"></script>
+        <script src="<%= htmlWebpackPlugin.options.env.VENDOR_URL %>/chroma-js/chroma-js@2.0.3.min.js"></script>
+        <% if (htmlWebpackPlugin.options.env.NODE_ENV == 'development') { %>
+        <script src="<%= htmlWebpackPlugin.options.env.VENDOR_URL %>/react/react@17.0.2.umd.development.js"></script>
+        <script src="<%= htmlWebpackPlugin.options.env.VENDOR_URL %>/history/history@5.1.0.umd.development.js"></script>
+        <script src="<%= htmlWebpackPlugin.options.env.VENDOR_URL %>/react-router/react-router@6.0.2.umd.development.js"></script>
+        <script src="<%= htmlWebpackPlugin.options.env.VENDOR_URL %>/react-dom/react-dom@17.0.2.umd.development.js"></script>
+        <script src="<%= htmlWebpackPlugin.options.env.VENDOR_URL %>/react-router-dom/react-router-dom@6.0.2.umd.development.js"></script>
+        <script src="<%= htmlWebpackPlugin.options.env.VENDOR_URL %>/material-ui/material-ui.core@4.12.3.umd.development.js"></script>
+        <% } else { %>
+        <script src="<%= htmlWebpackPlugin.options.env.VENDOR_URL %>/react/react@17.0.2.umd.production.min.js"></script>
+        <script src="<%= htmlWebpackPlugin.options.env.VENDOR_URL %>/history/history@5.1.0.umd.production.min.js"></script>
+        <script src="<%= htmlWebpackPlugin.options.env.VENDOR_URL %>/react-router/react-router@6.0.2.umd.production.min.js"></script>
+        <script src="<%= htmlWebpackPlugin.options.env.VENDOR_URL %>/react-dom/react-dom@17.0.2.umd.production.min.js"></script>
+        <script src="<%= htmlWebpackPlugin.options.env.VENDOR_URL %>/react-router-dom/react-router-dom@6.0.2.umd.production.min.js"></script>
+        <script src="<%= htmlWebpackPlugin.options.env.VENDOR_URL %>/material-ui/material-ui.core@4.12.3.umd.production.min.js"></script>
+        <% } %>
+        <script src="<%= htmlWebpackPlugin.options.env.VENDOR_URL %>/redux/redux@4.1.2.min.js"></script>
+        <script src="<%= htmlWebpackPlugin.options.env.VENDOR_URL %>/react-redux/react-redux@7.2.6.min.js"></script>
+        <script src="<%= htmlWebpackPlugin.options.env.VENDOR_URL %>/redux-toolkit/toolkit@1.6.2.umd.min.js"></script>
+    </head>
+    <body>
+        <div id="app"></div>
+    </body>
+</html>

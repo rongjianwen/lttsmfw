@@ -1,0 +1,24 @@
+{
+    "name": "root",
+    "private": true,
+    "scripts": {
+        "docs": "typedoc --sourcefile-url-prefix https://github.com/rongjianwen/lttsmfw/tree/main/ --entryPointStrategy packages .",
+        "prepare": "husky install",
+        "precommit": "lint-staged",
+        "pretty:config": "prettier --write \"*.{json,cjs,js}\" && prettier --write \"{configs,scripts}/*.{json,cjs,js}\"",
+        "pretty:packages": "lerna run pretty:config && lerna run pretty:src"
+    },
+    "devDependencies": {
+        "@babel/eslint-parser": "^7.16.3",
+        "husky": "^7.0.4",
+        "lerna": "^4.0.0",
+        "lint-staged": "^12.1.2",
+        "micromatch": "^4.0.4",
+        "nlfurniss-typedoc-plugin-sourcefile-url": "^2.0.0",
+        "typedoc": "^0.22.10",
+        "typescript": "^4.5.2"
+    },
+    "workspaces": [
+        "packages/*"
+    ]
+}
