@@ -22,7 +22,7 @@ cd packages/smfw-cms && yarn start:test
 
 # Example
 ```ts
-import { Engine,layouts, templates, themes, slices, createStore, createReducer } from '@smfw/web';
+import { Engine, layouts, templates, themes, slices, createStore, createReducer } from '@smfw/web';
 
 const engine = new Engine();
 const store = createStore(createReducer(slices), []);
